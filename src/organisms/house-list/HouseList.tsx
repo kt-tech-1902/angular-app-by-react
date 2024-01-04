@@ -1,51 +1,27 @@
-import { useEffect, useState } from "react";
+import { HousingLocation } from "../../utils/type";
+import { HouseCard } from "../house-card/HouseCard";
+import styles from "./HouseList.module.css";
 
-export interface HousingLocation {
-    id: number;
-    name: string;
-    city: string;
-    state: string;
-    photo: string;
-    availableUnits: number;
-    wifi: boolean;
-    laundry: boolean;
-}
+type Props = {
+    housingLocationList: HousingLocation[];
+};
 
-const BASE_URL = "http://localhost:3000/locations";
-
-export const HouseList = () => {
-    const getAllHousingLocations = async () => {
-        const data = await fetch(BASE_URL);
-        return (await data.json()) ?? [];
-    };
-
-    const getHousingLocationById = async (
-        id: number
-    ): Promise<HousingLocation | undefined> => {
-        const data = await fetch(`${BASE_URL}/${id}`);
-        return (await data.json()) ?? {};
-    };
-
-    console.log(getAllHousingLocations());
-    const [housingLocation, setHousingLocation] = useState<HousingLocation>();
-
-    useEffect(() => {
-        setHousingLocation(await getAllHousingLocations());
-    }, []);
-
+export const HouseList = (props: Props) => {
     return (
-        <>
-            <Head
-                title={"【MCU】公開予定"}
-                description="【MCU】公開予定の作品を紹介"
-            />
-            <main className={styles.main}>
-                {videoInfo ? (
-                    <MediaCard videoInfo={videoInfo} />
-                ) : (
-                    <Typography>Loading...</Typography>
+        <section className={styles.houseListContainer}>
+            {props.housingLocationList &&
+                props.housingLocationList.length > 0 && (
+                    <>
+                        {props.housingLocationList.map((housingLocation) => {
+                            return (
+                                <HouseCard
+                                    key={housingLocation.id}
+                                    housingLocation={housingLocation}
+                                />
+                            );
+                        })}
+                    </>
                 )}
-            </main>
-        </>
+        </section>
     );
 };

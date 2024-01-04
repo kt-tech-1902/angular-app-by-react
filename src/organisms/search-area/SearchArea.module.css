@@ -1,0 +1,22 @@
+.searchText {
+    border: solid 1px #605dc8;
+    padding: 10px;
+    border-radius: 8px;
+    margin-right: 4px;
+    display: inline-block;
+    width: 30%;
+}
+
+.searchButton {
+    padding: 10px;
+    border: solid 1px #605dc8;
+    background: #605dc8;
+    color: white;
+    border-radius: 8px;
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+    .searchText {
+        width: 70%;
+    }
+}

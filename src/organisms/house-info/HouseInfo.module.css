@@ -1,0 +1,83 @@
+.photo {
+    height: 600px;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 30px;
+    float: right;
+}
+
+.heading {
+    font-size: 48pt;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.location::before {
+    content: url("../../assets/location-pin.svg") / "";
+}
+
+.location {
+    font-size: 24pt;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.aboutLocation {
+    padding: 0;
+}
+
+.features > .sectionHeading {
+    color: #8b89e6;
+    font-size: 24pt;
+    margin-bottom: 15px;
+}
+
+.features {
+    margin-bottom: 20px;
+}
+
+.features li {
+    font-size: 14pt;
+}
+
+li {
+    list-style-type: none;
+}
+
+label,
+input {
+    display: block;
+}
+
+label {
+    color: #8b89e6;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12pt;
+}
+
+input {
+    font-size: 16pt;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 400px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: solid 0.3px;
+}
+
+.primary {
+    padding: 10px;
+    border: solid 1px#605DC8;
+    background: #605dc8;
+    color: white;
+    border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+    .photo {
+        width: 100%;
+        height: 400px;
+    }
+}
