@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/angular-app-by-react/static/css/main.13ffc3da.css",
+    "main.js": "/angular-app-by-react/static/js/main.c068f086.js",
+    "static/js/787.75c01b38.chunk.js": "/angular-app-by-react/static/js/787.75c01b38.chunk.js",
+    "static/media/logo.svg": "/angular-app-by-react/static/media/logo.495fcd03c469ab961afc9fec56182eab.svg",
+    "index.html": "/angular-app-by-react/index.html",
+    "static/media/location-pin.svg": "/angular-app-by-react/static/media/location-pin.5d35a9a3afb4de227da5.svg",
+    "main.13ffc3da.css.map": "/angular-app-by-react/static/css/main.13ffc3da.css.map",
+    "main.c068f086.js.map": "/angular-app-by-react/static/js/main.c068f086.js.map",
+    "787.75c01b38.chunk.js.map": "/angular-app-by-react/static/js/787.75c01b38.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13ffc3da.css",
+    "static/js/main.c068f086.js"
+  ]
+}
